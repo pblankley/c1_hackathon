@@ -13,31 +13,32 @@
  * limitations under the License.
  */
 
-package org.gearvrf.sample.sceneobjects;
+package com.example.org.gvrfapplication;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 import org.gearvrf.GVRActivity;
-import org.gearvrf.scene_objects.view.GVRView;
 import org.gearvrf.scene_objects.view.GVRWebView;
 
 public class SceneObjectActivity extends GVRActivity {
     private static final String TAG = "SceneObjectActivity";
-    private SampleMain mMain;
+    private MainActivity mMain;
     private long lastDownTime = 0;
     private GVRWebView webView;
 
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        Log.i("onCreate", "Process going...");
         super.onCreate(savedInstanceState);
         createWebView();
 
-        mMain = new SampleMain(this);
+        mMain = new MainActivity(this);
         setMain(mMain);
     }
 

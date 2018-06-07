@@ -14,10 +14,10 @@ allprojects {
 
 android {
     compileSdkVersion 26
-//    buildToolsVersion "27.0.3"
+    buildToolsVersion "27.0.3"
     defaultConfig {
-        applicationId "com.capitalone.mlo686.Carbo2k18"
-        minSdkVersion 21
+        applicationId "com.example.org.gvrfapplication"
+        minSdkVersion 24
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -48,7 +48,7 @@ dependencies {
     compile "com.google.code.gson:gson:$gsonVersion"
     compile "org.joml:joml-android:${jomlVersion}"
     compile "org.gearvrf:framework:$gearvrfVersion"
-//    compile "org.gearvrf:backend_daydream:$gearvrfVersion"
+    compile "org.gearvrf:backend_daydream:$gearvrfVersion"
     compile "org.gearvrf:backend_oculus:$gearvrfVersion"
     compile "com.google.vr:sdk-base:$daydreamVersion"
     compile "com.google.vr:sdk-controller:$daydreamVersion"

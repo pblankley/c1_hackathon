@@ -13,46 +13,31 @@
  * limitations under the License.
  */
 
-package org.gearvrf.sample.sceneobjects;
+package com.example.org.gvrfapplication;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.Future;
 
-import org.gearvrf.GVRAndroidResource;
 import org.gearvrf.GVRContext;
-import org.gearvrf.GVRMaterial;
-import org.gearvrf.GVRRenderData;
 import org.gearvrf.GVRScene;
 import org.gearvrf.GVRSceneObject;
 import org.gearvrf.GVRMain;
-import org.gearvrf.GVRTexture;
 import org.gearvrf.scene_objects.GVRCameraSceneObject;
-import org.gearvrf.scene_objects.GVRConeSceneObject;
-import org.gearvrf.scene_objects.GVRCubeSceneObject;
-import org.gearvrf.scene_objects.GVRCylinderSceneObject;
-import org.gearvrf.scene_objects.GVRSphereSceneObject;
 import org.gearvrf.scene_objects.GVRTextViewSceneObject;
 import org.gearvrf.scene_objects.GVRVideoSceneObject;
-import org.gearvrf.scene_objects.GVRVideoSceneObject.GVRVideoType;
-import org.gearvrf.scene_objects.GVRViewSceneObject;
-import org.gearvrf.scene_objects.view.GVRWebView;
 
-import android.content.res.AssetFileDescriptor;
-import android.media.MediaPlayer;
 import android.util.Log;
 import android.view.Gravity;
-import android.view.View;
 
-public class SampleMain extends GVRMain {
-    private static final String TAG = SampleMain.class.getSimpleName();
+public class MainActivity extends GVRMain {
+    private static final String TAG = MainActivity.class.getSimpleName();
     private List<GVRSceneObject> objectList = new ArrayList<GVRSceneObject>();
 
     private int currentObject = 0;
     private SceneObjectActivity mActivity;
 
-    SampleMain(SceneObjectActivity activity) {
+    MainActivity(SceneObjectActivity activity) {
         mActivity = activity;
     }
 
@@ -61,7 +46,7 @@ public class SampleMain extends GVRMain {
 
         GVRScene scene = gvrContext.getMainScene();
 
-
+        Log.i("Message:","in method onInit");
         // create a scene object (this constructor creates a rectangular scene
         // object that uses the standard 'unlit' shader)
         GVRCameraSceneObject cameraObject = null;
@@ -113,4 +98,6 @@ public class SampleMain extends GVRMain {
         }
     }
 
+    public void onTap() {
+    }
 }
