@@ -1,0 +1,4 @@
+Will need to get oculus signature file from 
+https://dashboard.oculus.com/tools/osig-generator/
+with the device id of the phone being used.
+Signature file goes into the assets folder.
